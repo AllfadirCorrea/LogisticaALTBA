@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:background="@drawable/background_altba1_jpeg">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:paddingBottom="1dp">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/logotipo_altba_negro"
+                android:id="@+id/imageView" android:layout_weight="1"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtUsuario" android:layout_weight="0"
+                android:hint="Usuario" android:textColorHint="@color/stategray"
+                android:textColor="@color/black" android:textCursorDrawable="@color/black"
+                android:layout_marginLeft="20dp" android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp" android:layout_marginRight="20dp"
+                android:layout_marginEnd="15dp"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/txtPassword" android:layout_weight="0"
+                android:hint="Contraseña" android:textColorHint="@color/stategray"
+                android:textColor="@color/black" android:textCursorDrawable="@color/black"
+                android:layout_marginLeft="20dp" android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp" android:layout_marginRight="20dp"
+                android:layout_marginEnd="15dp" android:layout_marginBottom="5dp"/>
+        <Button
+                android:text="Iniciar sesión"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/Init" android:layout_weight="0"
+                android:backgroundTint="@color/YellowOrange"
+                android:textColor="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"
+                android:layout_marginRight="15dp" android:layout_marginEnd="15dp" android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp" android:onClick="iniciarSesion"/>
+    </LinearLayout>
+</LinearLayout>

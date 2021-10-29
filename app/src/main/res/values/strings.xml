@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Logistica ALTBA</string>
+    <string name="scan">Escanea tu código QR</string>
+    <string name="nombre">Nombre del cliente: </string>
+    <string name="producto">Producto: </string>
+    <string name="direccion">Direccion: </string>
+    <string name="tel">Telefono: </string>
+    <string name="confirmar">Confirmar</string>
+    <string name="notFound">No se encontro el codigo proporcionado</string>
+</resources>
