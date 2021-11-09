@@ -1,6 +1,7 @@
 package com.example.logisticaaltba
 
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -30,12 +31,14 @@ class EntregarPedidosAct : AppCompatActivity() {
 
     private lateinit var codeScanner: CodeScanner
     private var no_guia: String = ""
+    private var progressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_entregar_pedidos)
 
         val btnConfirmar = findViewById<Button>(R.id.btnConfirmar)
+        progressDialog = ProgressDialog(this)
 
         setupPermission()
         codeScanner()
@@ -107,7 +110,7 @@ class EntregarPedidosAct : AppCompatActivity() {
     }
     @SuppressLint("SetTextI18n")
     private fun consultar(){
-        val URL ="http://sistema.logisticaab.com/API/control.php"
+        val URL ="http://192.168.1.229/sistema.logisticaab.com/API/control.php"//"http://sistema.logisticaab.com/API/control.php"
         val requestQueue = Volley.newRequestQueue(this)
         val txtNombre = findViewById<TextView>(R.id.txtClientName)
         val txtDireccion = findViewById<TextView>(R.id.txtDireccion)
@@ -116,6 +119,8 @@ class EntregarPedidosAct : AppCompatActivity() {
         val scannerTextview = findViewById<TextView>(R.id.scannerTextView)
         val btnConfirmar = findViewById<Button>(R.id.btnConfirmar)
         if (no_guia!=""){
+            progressDialog!!.setMessage("Espere un segundo")
+            progressDialog!!.show()
             val jsonObject = JSONObject()
             jsonObject.put("task", "consultar")
             jsonObject.put("no_guia", no_guia)
@@ -126,14 +131,17 @@ class EntregarPedidosAct : AppCompatActivity() {
                         txtDireccion.text=response.getString("Direccion")
                         txtProducto.text=response.getString("Cantidad")+" "+response.getString("Producto")+" de color "+response.getString("Color")
                         txtTelefono.text=response.getString("Contacto")
+                        progressDialog!!.dismiss()
                         btnConfirmar.visibility = View.VISIBLE
                     }else if(response.getString("status")=="notFound"){
                         Toast.makeText(this, "El codigo proporcionado no se ha encontrado", Toast.LENGTH_LONG).show()
                         scannerTextview.text = getString(R.string.notFound)
+                        progressDialog!!.dismiss()
                     }
                 },
                 { error ->
                     Toast.makeText(this, "Volley.error: ${error.toString()}", Toast.LENGTH_LONG).show()
+                    progressDialog!!.hide()
                 })
             requestQueue.add(jsonObjectRequest)
         }
@@ -142,19 +150,24 @@ class EntregarPedidosAct : AppCompatActivity() {
     private fun confirmarEntrega(){
         val URL ="http://192.168.1.229/sistema.logisticaab.com/API/control.php"
         val requestQueue = Volley.newRequestQueue(this)
+        progressDialog!!.setMessage("Espere un segundo")
+        progressDialog!!.show()
         val jsonObject = JSONObject()
         jsonObject.put("task", "entregar")
         jsonObject.put("no_guia", no_guia)
         val jsonObjectRequest = JsonObjectRequest(Request.Method.POST, URL, jsonObject,
             { response ->
                 if (response.getString("status")=="success"){
+                    progressDialog!!.dismiss()
                     Toast.makeText(this, "Entrega registrada exitosamente", Toast.LENGTH_SHORT).show()
                 }else if(response.getString("status")=="fail"){
+                    progressDialog!!.dismiss()
                     Toast.makeText(this, "Fallo el registro, intente de nuevo", Toast.LENGTH_SHORT).show()
                 }
             },
             { error ->
-
+                progressDialog!!.hide()
+                Toast.makeText(this, "Fallo el registro, intente de nuevo", Toast.LENGTH_SHORT).show()
             })
         requestQueue.add(jsonObjectRequest)
     }

@@ -1,6 +1,7 @@
 package com.example.logisticaaltba
 
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,15 +17,18 @@ import com.android.volley.toolbox.Volley
 import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
+
+    private var progressDialog: ProgressDialog? = null
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val URL = "http://sistema.logisticaab.com/API/control.php"
+        val URL = "http://192.168.1.229/sistema.logisticaab.com/API/control.php"//"http://sistema.logisticaab.com/API/control.php"
         val requestQueue = Volley.newRequestQueue(this)
 
-        val btnlogin = findViewById<Button>(R.id.btnInit)
+        val btnlogin = findViewById<Button>(R.id.btnLogin)
+        progressDialog= ProgressDialog(this)
 
         btnlogin.setOnClickListener{
             val txtUsuario = findViewById<EditText>(R.id.txtUsuario)
@@ -36,6 +40,8 @@ class MainActivity : AppCompatActivity() {
             }else if(txtPasswer.text.toString().isEmpty()){
                 Toast.makeText(this, "Por favor, introduce tu contraseña", Toast.LENGTH_LONG).show()
             }else{
+                progressDialog!!.setMessage("Validando...")
+                progressDialog!!.show()
                 val jsonObject = JSONObject()
                 jsonObject.put("task", task)
                 jsonObject.put("user", txtUsuario.text.toString())
@@ -47,12 +53,14 @@ class MainActivity : AppCompatActivity() {
                             Toast.makeText(this, "Bienvenido ${txtUsuario.text.toString()}", Toast.LENGTH_SHORT).show()
                             txtUsuario.setText("")
                             txtPasswer.setText("")
-
+                            progressDialog!!.dismiss()
                             val intent = Intent(this, Dashboard::class.java)
                             startActivity(intent)
                         }else if(response.getString("login")=="invalid"){
+                            progressDialog!!.hide()
                             Toast.makeText(this, "Su usuario o contrseña son incorrectos", Toast.LENGTH_LONG).show()
                         }else{
+                            progressDialog!!.hide()
                             txtPedo.text = response.toString()
                             Toast.makeText(this, "Algo debio malir sal", Toast.LENGTH_LONG).show()
                         }
