@@ -1,4 +1,4 @@
-package com.example.logisticaaltba
+package com.altba.logisticaaltba
 
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
@@ -14,6 +14,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.example.logisticaaltba.R
 import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val URL = "http://192.168.1.229/sistema.logisticaab.com/API/control.php"//"http://sistema.logisticaab.com/API/control.php"
+        val URL = "http://sistema.logisticaab.com/API/control.php"//"http://192.168.1.229/sistema.logisticaab.com/API/control.php"
         val requestQueue = Volley.newRequestQueue(this)
 
         val btnlogin = findViewById<Button>(R.id.btnLogin)

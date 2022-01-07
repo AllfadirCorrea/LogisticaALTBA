@@ -6,55 +6,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".Dashboard"
-        android:background="@drawable/background_altba1_jpeg" android:rotationX="1">
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_weight="2">
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_weight="1"
-            android:paddingBottom="1dp">
-        <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/logotipo_altba_negro"
-                android:id="@+id/imageView" android:layout_weight="1"/>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" android:layout_weight="1">
-            <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:layout_weight="1">
-                <Button
-                        android:text="Recibir pedido" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/recibir" android:layout_weight="1"
-                        android:backgroundTint="@color/YellowOrange" android:onClick="recibirPedido"
-                        android:textSize="12sp" android:textColor="@color/white"
-                        android:layout_margin="25dp" app:icon="@drawable/logistica__1_"
-                        app:iconTint="@color/white" app:iconSize="80sp"
-                        app:iconGravity="top"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:layout_weight="1">
-                <Button
-                        android:text="Registrar entrega" android:id="@+id/entregar" android:layout_weight="1"
-                        android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:backgroundTint="@color/YellowOrange" android:onClick="entregarPedido"
-                        android:textColor="@color/white" android:layout_margin="25dp" android:textSize="12sp"
-                        app:icon="@drawable/logistica" app:iconSize="80sp" app:iconTint="@color/white" app:iconGravity="top"/>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_weight="2">
-    </LinearLayout>
+        tools:context="com.altba.logisticaaltba.Dashboard"
+        android:background="@drawable/background_altba1_jpeg" android:rotationX="1"
+        android:paddingBottom="50dp">
+
+    <ImageView
+            android:layout_width="match_parent" android:layout_height="280dp"
+            app:srcCompat="@drawable/logotipo_altba_negro" android:id="@+id/imageView"
+            android:layout_marginTop="20dp" android:layout_marginBottom="60dp"
+            android:layout_marginStart="15dp" android:layout_marginEnd="15dp"
+            android:paddingTop="40dp" android:paddingBottom="40dp"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/recibir" android:text="Recibir pedido"
+            android:backgroundTint="@color/YellowOrange" android:onClick="recibirPedido"
+            android:textSize="16sp" android:textColor="@color/white"
+            app:icon="@drawable/logistica__1_" app:iconGravity="top"
+            app:iconTint="@color/white" app:iconSize="80sp"
+            android:layout_marginStart="25dp" android:layout_marginEnd="25dp"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/entregar" android:text="Registrar entrega"
+            android:backgroundTint="@color/YellowOrange" android:onClick="entregarPedido"
+            android:textSize="16sp" android:textColor="@color/white"
+            app:icon="@drawable/logistica" app:iconGravity="top"
+            app:iconTint="@color/white" app:iconSize="80sp"
+            android:layout_marginStart="25dp" android:layout_marginEnd="25dp"/>
+
 </LinearLayout>

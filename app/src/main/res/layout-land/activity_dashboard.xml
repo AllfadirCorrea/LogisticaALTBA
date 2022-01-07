@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".Dashboard"
+        tools:context="com.altba.logisticaaltba.Dashboard"
         android:background="@drawable/background_altba1_jpeg">
     <LinearLayout
             android:orientation="vertical"

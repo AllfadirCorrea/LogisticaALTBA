@@ -1,4 +1,4 @@
-package com.example.logisticaaltba
+package com.altba.logisticaaltba
 
 import org.junit.Test
 

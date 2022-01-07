@@ -13,20 +13,20 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.LogisticaALTBA"
             android:usesCleartextTraffic="true">
-        <activity android:name=".EntregarPedidosAct" android:parentActivityName=".Dashboard">
+        <activity android:name="com.altba.logisticaaltba.EntregarPedidosAct" android:parentActivityName="com.altba.logisticaaltba.Dashboard">
 
         </activity>
-        <activity android:name=".RecibirPedidosAct" android:parentActivityName=".Dashboard">
+        <activity android:name="com.altba.logisticaaltba.RecibirPedidosAct" android:parentActivityName="com.altba.logisticaaltba.Dashboard">
 
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.altba.logisticaaltba.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Dashboard" android:parentActivityName=".MainActivity">
+        <activity android:name="com.altba.logisticaaltba.Dashboard" android:parentActivityName="com.altba.logisticaaltba.MainActivity">
             <!--The meta-data tag is required if you support API level 15 and lower
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"

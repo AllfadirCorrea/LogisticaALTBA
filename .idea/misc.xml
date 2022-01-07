@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/drawable/rounded_edittext.xml" value="0.23257328990228013" />
+        <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/layout/activity_entregar_pedidos.xml" value="0.2224755700325733" />
+        <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/layout/activity_recibir_pedidos.xml" value="0.2315960912052117" />
+        <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/mipmap-anydpi-v26/ic_altba.xml" value="0.23257328990228013" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-11" project-jdk-type="JavaSDK" />
 </project>
