@@ -241,7 +241,7 @@ class EntregarPedidosAct : AppCompatActivity() {
                     jsonObject.put("no_guia", no_guia)
                     /* Cambio de la BD */
                     val jsonObjectRequest = JsonObjectRequest(Request.Method.POST, URL, jsonObject,
-                        { respuesta ->
+                       {  respuesta ->
                             if (respuesta.getString("status")=="success"){
                                 Toast.makeText(this, "Entrega registrada exitosamente", Toast.LENGTH_SHORT).show()
                                 txtNombre.text="Cliente: "
@@ -263,9 +263,17 @@ class EntregarPedidosAct : AppCompatActivity() {
                         })
                     requestQueue.add(jsonObjectRequest)
                 }
+                else if(response == "failed"){
+                    Toast.makeText(this, "Fallo la carga de la imagen, favor de ponerse en contacto con Logistica AB para informar", Toast.LENGTH_SHORT).show()
+                    loading!!.dismiss()
+                }else{
+                    Toast.makeText(this, response, Toast.LENGTH_SHORT).show()
+                    loading!!.dismiss()
+
+                }
             },Response.ErrorListener { error ->
                 loading!!.dismiss()
-                Toast.makeText(this@EntregarPedidosAct, error.message.toString(), Toast.LENGTH_LONG).show()
+                Toast.makeText(this@EntregarPedidosAct, /*.message.toString()*/"Fallo el regsitro, ponerse en contacto con logistica AB", Toast.LENGTH_LONG).show()
             }
         ){
             @Throws(AuthFailureError::class)

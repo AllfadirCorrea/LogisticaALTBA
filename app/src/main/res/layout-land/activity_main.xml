@@ -42,10 +42,10 @@
         <Button
                 android:text="Iniciar sesión"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/Init" android:layout_weight="0"
-                android:backgroundTint="@color/YellowOrange"
-                android:textColor="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content" android:id="@+id/btnLogin" android:layout_weight="0"
+                android:backgroundTint="@color/yellowAlt"
+                android:textColor="@color/webGrey" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"
                 android:layout_marginRight="15dp" android:layout_marginEnd="15dp" android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp" android:onClick="iniciarSesion"/>
+                android:layout_marginStart="15dp"/>
     </LinearLayout>
 </LinearLayout>

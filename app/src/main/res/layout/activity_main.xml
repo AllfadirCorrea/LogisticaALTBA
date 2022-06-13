@@ -37,11 +37,11 @@
         <Button
                 android:text="Iniciar sesión" android:id="@+id/btnLogin"
                 android:layout_width="match_parent" android:layout_height="60sp"
-                android:backgroundTint="@color/YellowOrange" android:textColor="@color/white"
+                android:backgroundTint="@color/yellowAlt" android:textColor="@color/webGrey"
                 android:layout_marginTop="10dp" android:layout_marginBottom="10dp"
                 android:layout_marginEnd="25dp" android:layout_marginStart="25dp"
                 app:icon="@drawable/enter" app:iconSize="25sp" android:textSize="16sp"
-                app:iconGravity="textEnd" app:iconTint="@color/white"/>
+                app:iconGravity="textEnd" app:iconTint="@color/webGrey"/>
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                   android:id="@+id/txtPedo" android:gravity="center"/>
 

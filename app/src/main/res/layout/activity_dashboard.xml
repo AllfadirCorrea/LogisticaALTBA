@@ -13,26 +13,29 @@
     <ImageView
             android:layout_width="match_parent" android:layout_height="180dp"
             app:srcCompat="@drawable/logotipo_altba_negro" android:id="@+id/imageView"
-            android:layout_marginTop="20dp" android:layout_marginBottom="40dp"
+            android:layout_marginTop="20dp" android:layout_marginBottom="20dp"
             android:layout_marginStart="15dp" android:layout_marginEnd="15dp"
             android:paddingTop="40dp" android:paddingBottom="40dp"/>
 
-    <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:id="@+id/recibir" android:text="Recibir pedido"
-                android:backgroundTint="@color/YellowOrange" android:onClick="recibirPedido"
-                android:textSize="16sp" android:textColor="@color/white"
-                app:icon="@drawable/logistica__1_" app:iconGravity="top"
-                app:iconTint="@color/white" app:iconSize="80sp"
-                android:layout_marginStart="25dp" android:layout_marginEnd="25dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:orientation="vertical" android:layout_gravity="center">
+            <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/recibir" android:text="Recibir pedido"
+                    android:backgroundTint="@color/yellowAlt" android:onClick="recibirPedido"
+                    android:textSize="16sp" android:textColor="@color/webGrey"
+                    app:icon="@drawable/logistica__1_" app:iconGravity="top"
+                    app:iconTint="@color/webGrey" app:iconSize="80sp"
+                    android:layout_marginStart="25dp" android:layout_marginEnd="25dp"/>
 
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:id="@+id/entregar" android:text="Registrar entrega"
-                android:backgroundTint="@color/YellowOrange" android:onClick="entregarPedido"
-                android:textSize="16sp" android:textColor="@color/white"
-                app:icon="@drawable/logistica" app:iconGravity="top"
-                app:iconTint="@color/white" app:iconSize="80sp"
-                android:layout_marginStart="25dp" android:layout_marginEnd="25dp"/>
+            <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/entregar" android:text="Registrar entrega"
+                    android:backgroundTint="@color/yellowAlt" android:onClick="entregarPedido"
+                    android:textSize="16sp" android:textColor="@color/webGrey"
+                    app:icon="@drawable/logistica" app:iconGravity="top"
+                    app:iconTint="@color/webGrey" app:iconSize="80sp"
+                    android:layout_marginStart="25dp" android:layout_marginEnd="25dp"/>
+        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>

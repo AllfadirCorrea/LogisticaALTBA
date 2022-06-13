@@ -12,6 +12,8 @@
     <color name="YellowOrange">#F56416</color>
     <color name="stategray">#738290</color>
     <color name="dimgray">#65655E</color>
+    <color name="yellowAlt">#FFE347</color>
+    <color name="webGrey">#808080</color>
 
     <!-- Colores varios-->
     <color name="colorPrimary">#3F51B5</color>

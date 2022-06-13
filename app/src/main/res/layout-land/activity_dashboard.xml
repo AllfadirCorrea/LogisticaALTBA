@@ -29,10 +29,10 @@
                         android:text="Recibir pedido"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" android:id="@+id/recibir" android:layout_weight="1"
-                        android:backgroundTint="@color/YellowOrange" android:onClick="recibirPedido"
-                        android:textColor="@color/blackVariant" android:layout_margin="20dp"
+                        android:backgroundTint="@color/yellowAlt" android:onClick="recibirPedido"
+                        android:textColor="@color/webGrey" android:layout_margin="20dp"
 
-                        app:icon="@drawable/logistica__1_" app:iconTint="@color/blackVariant" app:iconSize="80dp"
+                        app:icon="@drawable/logistica__1_" app:iconTint="@color/webGrey" app:iconSize="80dp"
                         app:iconGravity="top"/>
             </LinearLayout>
             <LinearLayout
@@ -43,10 +43,10 @@
                         android:text="Registrar entrega"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" android:id="@+id/entregar" android:layout_weight="1"
-                        android:backgroundTint="@color/YellowOrange" android:onClick="entregarPedido"
-                        android:textColor="@color/blackVariant" android:layout_margin="20dp"
+                        android:backgroundTint="@color/yellowAlt" android:onClick="entregarPedido"
+                        android:textColor="@color/webGrey" android:layout_margin="20dp"
                         app:icon="@drawable/logistica"
-                        app:iconSize="75dp" app:iconGravity="top" app:iconTint="@color/blackVariant"/>
+                        app:iconSize="75dp" app:iconGravity="top" app:iconTint="@color/webGrey"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
