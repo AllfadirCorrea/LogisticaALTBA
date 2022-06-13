@@ -121,6 +121,7 @@ class EntregarPedidosAct : AppCompatActivity() {
         val txtDireccion= findViewById<TextView>(R.id.txtDireccion)
         val txtProducto = findViewById<TextView>(R.id.txtProducto)
         val txtTelefono = findViewById<TextView>(R.id.txtTelefono)
+        val txtPago = findViewById<TextView>(R.id.txtPago)
         val scannerTextview = findViewById<TextView>(R.id.scannerTextView)
         val btnChoosepic = findViewById<Button>(R.id.btnChoosePic)
         if (no_guia!=""){
@@ -136,14 +137,16 @@ class EntregarPedidosAct : AppCompatActivity() {
                         txtProducto.text="Producto: "+response.getString("Cantidad")+" "+response.getString("Producto")+" de color "+response.getString("Color")
                         txtDireccion.text="Direccion: "+response.getString("Direccion")
                         txtTelefono.text="Telefono: "+response.getString("Contacto")
+                        txtPago.text="Pago: "+response.getString("Pago")
                         loading!!.dismiss()
                         btnChoosepic.visibility = View.VISIBLE
                     }else if(response.getString("status")=="notFound"){
                         Toast.makeText(this, "El codigo proporcionado no se ha encontrado", Toast.LENGTH_LONG).show()
-                        txtNombre.text=""
-                        txtDireccion.text=""
-                        txtProducto.text=""
-                        txtTelefono.text=""
+                        txtNombre.text="Cliente: "
+                        txtDireccion.text="Producto: "
+                        txtProducto.text="Direccion: "
+                        txtTelefono.text="Telefono: "
+                        txtPago.text="Pago: "
                         scannerTextview.text = getString(R.string.notFound)
                         btnChoosepic.visibility = View.INVISIBLE
                         loading!!.dismiss()
@@ -221,6 +224,7 @@ class EntregarPedidosAct : AppCompatActivity() {
         val txtDireccion= findViewById<TextView>(R.id.txtDireccion)
         val txtProducto = findViewById<TextView>(R.id.txtProducto)
         val txtTelefono = findViewById<TextView>(R.id.txtTelefono)
+        val txtPago = findViewById<TextView>(R.id.txtPago)
         val scannerTextview = findViewById<TextView>(R.id.scannerTextView)
         val btnConfirmar = findViewById<Button>(R.id.btnConfirmar)
         loading!!.setMessage("Espere un segundo")
@@ -244,6 +248,7 @@ class EntregarPedidosAct : AppCompatActivity() {
                                 txtProducto.text="Producto: "
                                 txtDireccion.text="Direccion: "
                                 txtTelefono.text="Telefono: "
+                                txtPago.text="Pago: "
                                 scannerTextview.text = getString(R.string.scan)
                                 btnConfirmar.visibility = View.INVISIBLE
                                 loading!!.dismiss()

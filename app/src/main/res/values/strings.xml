@@ -5,6 +5,7 @@
     <string name="producto">Producto: </string>
     <string name="direccion">Direccion: </string>
     <string name="tel">Telefono: </string>
+    <string name="pago">Pago: </string>
     <string name="confirmar">Confirmar</string>
     <string name="notFound">No se encontro el codigo proporcionado</string>
 </resources>

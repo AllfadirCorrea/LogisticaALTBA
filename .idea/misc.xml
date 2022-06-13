@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/drawable/rounded_edittext.xml" value="0.23257328990228013" />
+        <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/layout/activity_dashboard.xml" value="0.33" />
         <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/layout/activity_entregar_pedidos.xml" value="0.2224755700325733" />
+        <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/layout/activity_main.xml" value="0.12203947368421053" />
         <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/layout/activity_recibir_pedidos.xml" value="0.2315960912052117" />
         <entry key="..\:/Users/alfa_/IntelliJIDEAProjects/LogisticaALTBA/app/src/main/res/mipmap-anydpi-v26/ic_altba.xml" value="0.23257328990228013" />
       </map>

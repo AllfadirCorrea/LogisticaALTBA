@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                 progressDialog!!.show()
                 val jsonObject = JSONObject()
                 jsonObject.put("task", task)
-                jsonObject.put("user", txtUsuario.text.toString())
+                jsonObject.put("user", txtUsuario.text.toString().trim())
                 jsonObject.put("pass", txtPasswer.text.toString())
                 val jsonObjectRequest = JsonObjectRequest(Request.Method.POST, URL, jsonObject,
                     { response ->
