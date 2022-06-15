@@ -11,11 +11,10 @@
         android:paddingBottom="50dp">
 
     <ImageView
-            android:layout_width="match_parent" android:layout_height="180dp"
+            android:layout_width="match_parent" android:layout_height="100dp"
             app:srcCompat="@drawable/logotipo_altba_negro" android:id="@+id/imageView"
             android:layout_marginTop="20dp" android:layout_marginBottom="20dp"
-            android:layout_marginStart="15dp" android:layout_marginEnd="15dp"
-            android:paddingTop="40dp" android:paddingBottom="40dp"/>
+            android:layout_marginStart="15dp" android:layout_marginEnd="15dp"/>
 
     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
         <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
@@ -33,6 +32,13 @@
                     android:backgroundTint="@color/yellowAlt" android:onClick="entregarPedido"
                     android:textSize="16sp" android:textColor="@color/webGrey"
                     app:icon="@drawable/logistica" app:iconGravity="top"
+                    app:iconTint="@color/webGrey" app:iconSize="80sp"
+                    android:layout_marginStart="25dp" android:layout_marginEnd="25dp"/>
+            <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/cerrarSesion" android:text="Cerrar sesión"
+                    android:backgroundTint="@color/yellowAlt" android:onClick="cerrarSesion"
+                    android:textSize="16sp" android:textColor="@color/webGrey"
+                    app:icon="@drawable/log_out_icon" app:iconGravity="top"
                     app:iconTint="@color/webGrey" app:iconSize="80sp"
                     android:layout_marginStart="25dp" android:layout_marginEnd="25dp"/>
         </LinearLayout>
