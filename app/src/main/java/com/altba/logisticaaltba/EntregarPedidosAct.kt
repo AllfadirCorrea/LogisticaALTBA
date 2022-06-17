@@ -253,7 +253,7 @@ class EntregarPedidosAct : AppCompatActivity() {
                                 btnConfirmar.visibility = View.INVISIBLE
                                 loading!!.dismiss()
                             }else if(respuesta.getString("status")=="failed"){
-                                Toast.makeText(this, "Fallo el registro, intente de nuevo", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this, "Imagen subida, registro fallido, contactar con Logistica AB para confirmar", Toast.LENGTH_SHORT).show()
                                 loading!!.dismiss()
                             }
                         },
@@ -264,6 +264,9 @@ class EntregarPedidosAct : AppCompatActivity() {
                     requestQueue.add(jsonObjectRequest)
                 }
                 else if(response == "failed"){
+                    Toast.makeText(this, "Se cargo la imagen, fallo el registro", Toast.LENGTH_SHORT).show()
+                    loading!!.dismiss()
+                }else if(response == "failedImg"){
                     Toast.makeText(this, "Fallo la carga de la imagen, favor de ponerse en contacto con Logistica AB para informar", Toast.LENGTH_SHORT).show()
                     loading!!.dismiss()
                 }else{
